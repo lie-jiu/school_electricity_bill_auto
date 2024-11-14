@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages, bdist_wheel
 
 setup(
     name='电费检测',
