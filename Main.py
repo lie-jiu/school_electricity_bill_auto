@@ -99,7 +99,7 @@ def check_balance(user, mode, value, url, password, retry=False):
 
 # 使用函数
 user = "2#-303"  # 填寝室账号
-mode = True  # True:每次都提醒 False：低于value提醒
+mode = False  # True:每次都提醒 False：低于value提醒
 value = 5.0  # 提醒阈值，mode为1不运作
 url = "http://jxgsxy.acrel-eem.com"  # 网址
 password = "gs@1998_XY."  # 默认密码
