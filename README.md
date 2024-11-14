@@ -17,9 +17,13 @@ School Electricity Bill Auto 是一个自动化工具，旨在帮助用户自动
 1. 克隆本项目到本地：
    ```bash
    git clone https://github.com/lie-jiu/school_electricity_bill_auto.git
-
-2. 建议设置开机自动执行，批处理脚本:
    ```
-   @echo off
-   python 路径\Main.py
-   
+2. 建议设置开机自动执行:
+
+   w+r打开运行输入下面代码。
+   ```运行
+   shell:startup
+   ```
+   把打包好的exe文件放在打开的文件夹中，一般目录为
+   ```
+   C:\Users\用户\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
