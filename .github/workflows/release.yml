@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - master  # 触发工作流程的分支
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'  # 设置 Python 版本
+    - name: Install dependencies
+      run: pip install -r requirements.txt  # 安装依赖
+    - name: Build package
+      run: python setup.py sdist bdist_wheel  # 打包
+    - name: Publish to GitHub Releases
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "dist/*"  # 指定要发布的文件
+        token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub Token
